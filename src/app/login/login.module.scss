@@ -1,0 +1,256 @@
+.loginContainer {
+  min-height: calc(100vh - 64px); // Adjust based on your header height
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: #f5f5f5;
+}
+
+.loginCard {
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+
+  :global {
+    .ant-card-body {
+      padding: 32px;
+    }
+  }
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 8px !important;
+}
+
+.subtitle {
+  display: block;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.45);
+  margin-bottom: 32px;
+}
+
+.input {
+  height: 45px;
+  border-radius: 4px;
+
+  :global {
+    .ant-input-prefix {
+      margin-right: 12px;
+      color: rgba(0, 0, 0, 0.25);
+    }
+  }
+}
+
+.forgotPassword {
+  text-align: right;
+  margin-top: -12px;
+  margin-bottom: 24px;
+
+  a {
+    color: #1890ff;
+    &:hover {
+      color: #40a9ff;
+    }
+  }
+}
+
+.loginButton {
+  height: 45px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.register {
+  text-align: center;
+  margin-top: 16px;
+
+  .registerLink {
+    margin-left: 8px;
+    color: #1890ff;
+    &:hover {
+      color: #40a9ff;
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 480px) {
+  .loginCard {
+    :global {
+      .ant-card-body {
+        padding: 24px 16px;
+      }
+    }
+  }
+
+  .title {
+    font-size: 24px !important;
+  }
+}
+
+#auth_form {
+  .back-btn {
+    width: 95%;
+    max-width: 620px;
+    margin: 0 auto 7px;
+    display: flex;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background: none !important;
+    border: none !important;
+    .anticon-arrow-left {
+      font-size: 1.5rem;
+      padding-right: 0.5rem;
+    }
+    &:hover {
+      background: none !important;
+      border: none !important;
+    }
+  }
+  .otp-text-section {
+    max-width: 390px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    font-weight: 500;
+    display: block;
+  }
+  .otp-wrapper {
+    margin-top: 35px;
+    max-width: 390px;
+    margin-left: auto;
+    margin-right: auto;
+    .ant-row {
+      align-items: baseline;
+    }
+
+    .ant-form-item {
+      // margin-bottom: 0px !important;
+      // margin-top: -10px;
+      button {
+        padding-left: 0;
+      }
+    }
+    .enterotp {
+      margin-bottom: 15px !important;
+      .ant-form-item-control-input-content > div {
+        justify-content: space-between !important;
+      }
+    }
+
+    .optinput {
+      max-width: 75px;
+      width: 22% !important;
+      height: 55px;
+      font-size: 24px;
+      text-align: center;
+      border: 1px solid #d9d9d9;
+      border-radius: 4px;
+      margin-top: 0 !important;
+    }
+    .login-form-button {
+      // background-color: $secondaryColor;
+      border-radius: 8px;
+      border: 1px solid #d6dae3;
+      width: 96%;
+      min-height: 50px;
+      margin-top: 15px;
+      padding: 0;
+      &.submit-btn {
+        // background: $primaryColor;
+      }
+      span {
+        font-weight: normal;
+      }
+    }
+    .link-btn {
+      padding: 0 10px 0 0;
+    }
+    .clear-link {
+      // color: #858585;
+      //border-left: 1px solid #858585;
+      border-radius: 0;
+      padding: 0 0 0 10px !important;
+      margin: 0;
+      position: relative;
+      &::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 5px;
+        width: 1px;
+        height: 60%;
+        background: #858585;
+      }
+    }
+  }
+}
+
+.otpWrapper {
+  margin-top: 24px;
+
+  .ant-form-item:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.otpInput {
+  margin-bottom: 24px;
+}
+
+.otpContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.optInput {
+  width: 60px !important;
+  height: 60px !important;
+  font-size: 24px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  text-align: center;
+  margin: 0 !important;
+  padding: 0;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  &[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  &:focus {
+    border-color: #1890ff;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+  }
+}
+
+.submitButton {
+  height: 45px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.backButton {
+  height: 45px;
+  font-size: 16px;
+  border-radius: 4px;
+  margin-top: 8px !important;
+  border: 1px solid #d9d9d9;
+
+  &:hover {
+    color: #40a9ff;
+    border-color: #40a9ff;
+  }
+}
